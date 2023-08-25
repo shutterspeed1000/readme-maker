@@ -37,8 +37,8 @@ questions
   ])
   .then((answers) => {
   
-  console.log(answers);
-  const answerObj = answers;
+  // console.log(answers);
+  answers = markupMaker()
   })
 
 
