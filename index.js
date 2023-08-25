@@ -2,7 +2,7 @@
 
 // TODO: Create an array of questions for user input
 const questions = require('inquirer');
-const markupMaker = require('./utils/generateMarkdown.js');
+const markupMaker = require('./utils/generateMarkdown.js').answerObj;
 
 
 questions
@@ -35,8 +35,11 @@ questions
       },
 
   ])
-  .then((answers) =>
-  markupMaker.answers(answers))
+  .then((answers) => {
+  
+  console.log(answers);
+  const answerObj = answers;
+  })
 
 
 

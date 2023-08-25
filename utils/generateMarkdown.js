@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const answers = {}
+const answerObj = {}
+console.log(answerObj);
 
 function renderLicenseBadge(license) {
 
@@ -21,4 +22,4 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = {generateMarkdown, answers }
+module.exports = {generateMarkdown, answerObj }
