@@ -13,6 +13,16 @@ const questBank = [
   },
   {
     type: "input",
+    message: "What is your Github user ID?",
+    name: "user",
+  },
+  {
+    type: "input",
+    message: "What is you email address?",
+    name: "email",
+  },
+  {
+    type: "input",
     message: "Describe your project:",
     name: "projectDesc",
   },
@@ -28,18 +38,18 @@ const questBank = [
   },
   {
     type: "input",
-    message: "Do you have any credits to add?",
+    message: "Do anyone else contribute to this project?",
     name: "credits",
-  },
-  {
-    type: "input",
-    message: "Describe the features in your program?",
-    name: "features",
   },
   {
     type: "input",
     message: "How can people contribute to this project?",
     name: "contribute",
+  },
+  {
+    type: "input",
+    message: "How can you test this program?",
+    name: "tests",
   },
   {
     type: "list",

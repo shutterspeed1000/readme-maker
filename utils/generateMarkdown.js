@@ -47,8 +47,10 @@ ${data.projectDesc}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
+- [Contributing](#contributing)
 ${renderLicenseLink(data.license)}
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -58,17 +60,22 @@ ${data.installation}
 
 ${data.usage}
 
-## Credits
-
-${data.credits}
-${renderLicenseSection(data.license)}
-## Features
-
-${data.features}
-
-## How to Contribute
+## Contributing
 
 ${data.contribute}
+
+${renderLicenseSection(data.license)}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+For more of my projects, please visit https://github.com/${data.username}
+
+Do you have questions or suggestions for this application?
+Contact me at ${data.email}
 
 `;
 }
