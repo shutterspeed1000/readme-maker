@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 
 const questions = require("inquirer");
-const markupMaker = require("./utils/generateMarkdown.js");
-const fs = require('fs');
+const generateMarkdown = require("./utils/generateMarkdown");
+const fs = require("fs");
 
 // TODO: Create an array of questions for user input
 const questBank = [
@@ -44,33 +44,27 @@ const questBank = [
   {
     type: "list",
     message: "Please selecte the type of license:",
-    choices: ["MIT", "GNU GPL v3", "Mozilla Public License 2.0"],
+    choices: ["MIT", "GNU", "Mozilla_Public_License_2.0", 'None'],
     name: "license",
   },
 ];
 
 
 
-
-let doc = questions.prompt(questBank).then((answers) => {
-  let readmeDoc = (markupMaker.generateMarkdown(answers));
-return readmeDoc  
-})
-
-
-
-
-
-
 // // TODO: Create a function to write README file
-// function writeToFile(readme, fileCont) {
+function writeToFile(fileName, data) {
+fs.writeFile(fileName, data, (err, result)=> {
+  if  (err) throw err;
+  console.log('Readme has been created!');
+})
+}
 
-//   console.log(fileCont)
+// TODO: Create a function to initialize app
+function init() {
+  questions.prompt(questBank).then((answers) => {
+    writeToFile('README.md', generateMarkdown(answers))
+  });
+}
 
-// }
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();

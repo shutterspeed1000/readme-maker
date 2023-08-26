@@ -1,45 +1,42 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
-
-
-
 function renderLicenseBadge(license) {
-
-
-let licBadge = ""
-if (license == "MIT"){
-
-  licBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
-
+if (license === "None"){
+  return ''
 }
-if (license == "GNU GPL v3"){
-
-    licBadge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`
-
-}
-if (license == "Mozilla Public License 2.0"){
-
-    licBadge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`
-
-}
-return licBadge
+return `![License: ${license}](https://img.shields.io/badge/License-${license}-brightgreen.svg)`
 
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === "None"){
+    return ''
+  }
+  return `- [License](#license)`
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === "None"){
+    return ''
+  }
+  return `
+## License
+
+~This application is covered under the ${license}
+  
+`
+
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-
-#${data.projectName}
+  return `#${data.projectName}
+${renderLicenseBadge(data.license)}
 
 ## Description
 
@@ -51,7 +48,7 @@ ${data.projectDesc}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
+${renderLicenseLink(data.license)}
 
 ## Installation
 
@@ -64,16 +61,7 @@ ${data.usage}
 ## Credits
 
 ${data.credits}
-
-## License
-
-${data.license}
-
-
-## Badges
-
-${renderLicenseBadge(data.license)}
-
+${renderLicenseSection(data.license)}
 ## Features
 
 ${data.features}
@@ -85,4 +73,4 @@ ${data.contribute}
 `;
 }
 
-module.exports = {generateMarkdown,}
+module.exports = generateMarkdown;
