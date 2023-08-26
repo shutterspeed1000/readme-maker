@@ -52,7 +52,7 @@ const questBank = [
 
 
 
-questions.prompt(questBank).then((answers) => {
+let doc = questions.prompt(questBank).then((answers) => {
   let readmeDoc = (markupMaker.generateMarkdown(answers));
 return readmeDoc  
 })
