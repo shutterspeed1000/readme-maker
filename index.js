@@ -2,6 +2,7 @@
 
 const questions = require("inquirer");
 const markupMaker = require("./utils/generateMarkdown.js");
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questBank = [
@@ -48,21 +49,28 @@ const questBank = [
   },
 ];
 
+
+
+
 questions.prompt(questBank).then((answers) => {
-  console.log(markupMaker.generateMarkdown(answers));
-});
+  let readmeDoc = (markupMaker.generateMarkdown(answers));
+return readmeDoc  
+})
 
-// .then((answers) => {
 
-//   markupMaker(answers)
 
-// })
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
-init();
+// // TODO: Create a function to write README file
+// function writeToFile(readme, fileCont) {
+
+//   console.log(fileCont)
+
+// }
+
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();

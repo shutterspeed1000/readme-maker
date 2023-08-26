@@ -5,22 +5,22 @@
 
 
 function renderLicenseBadge(license) {
-console.log(`License is ${license}`)
+
 
 let licBadge = ""
 if (license == "MIT"){
 
-  licBadge = `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
+  licBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`
 
 }
 if (license == "GNU GPL v3"){
 
-    licBadge = `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
+    licBadge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`
 
 }
 if (license == "Mozilla Public License 2.0"){
 
-    licBadge = `![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)`
+    licBadge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`
 
 }
 return licBadge
@@ -68,10 +68,11 @@ ${data.credits}
 ## License
 
 ${data.license}
-${renderLicenseBadge(data.license)}
 
 
 ## Badges
+
+${renderLicenseBadge(data.license)}
 
 ## Features
 
@@ -81,8 +82,6 @@ ${data.features}
 
 ${data.contribute}
 
-
-${renderLicenseBadge(data.license)}
 `;
 }
 
