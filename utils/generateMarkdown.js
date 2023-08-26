@@ -27,7 +27,7 @@ function renderLicenseSection(license) {
   return `
 ## License
 
-~This application is covered under the ${license}
+This application is covered under the ${license}
   
 `
 
@@ -35,8 +35,8 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `#${data.projectName}
-${renderLicenseBadge(data.license)}
+  return `# ${data.projectName}
+## ${renderLicenseBadge(data.license)}
 
 ## Description
 

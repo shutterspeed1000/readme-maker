@@ -14,7 +14,7 @@ const questBank = [
   {
     type: "input",
     message: "What is your Github user ID?",
-    name: "user",
+    name: "username",
   },
   {
     type: "input",
