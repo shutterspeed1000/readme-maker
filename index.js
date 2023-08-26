@@ -1,12 +1,14 @@
 // TODO: Include packages needed for this application
 
-// TODO: Create an array of questions for user input
+
 const questions = require('inquirer');
-const markupMaker = require('./utils/generateMarkdown.js').answerObj;
+const markupMaker = require('./utils/generateMarkdown.js');
 
 
-questions
-  .prompt([
+
+
+// TODO: Create an array of questions for user input
+  const questBank = [
     {
       type: 'input',
       message: 'What is your project name?',
@@ -34,14 +36,24 @@ questions
         name: 'license',
       },
 
-  ])
-  .then((answers) => {
+  ]
+
+questions.prompt(questBank).then((answers) => {
+
+console.log(markupMaker.generateMarkdown(answers))
+})
+
+
+
+
+
+  // .then((answers) => {
   
-  // console.log(answers);
-  answers = markupMaker()
-  })
+  //   markupMaker(answers)
 
+  // })
 
+ 
 
 
 // TODO: Create a function to write README file
