@@ -1,9 +1,9 @@
-# et
-## ![License: GNU](https://img.shields.io/badge/License-GNU-brightgreen.svg)
+# wr
+## ![License: Mozilla_Public_License_2.0](https://img.shields.io/badge/License-Mozilla_Public_License_2.0-brightgreen.svg)
 
 ## Description
 
-rgr
+werg
 
 
 ## Table of Contents
@@ -17,28 +17,28 @@ rgr
 
 ## Installation
 
-rwg
+eg
 
 ## Usage
 
-rgw
+wge
 
 ## Contributing
 
-rg
+ewg
 
 ## License
 
-This application is covered under the GNU
+This application is covered under the Mozilla_Public_License_2.0
 
 ## Tests
 
-rwg
+werg
 
 ## Questions
 
-For more of my projects, please visit https://github.com/er
+For more of my projects, please visit https://github.com/wre
 
 Do you have questions or suggestions for this application?
-Contact me at reg
+Contact me at weg
 
