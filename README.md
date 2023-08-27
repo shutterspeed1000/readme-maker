@@ -40,6 +40,7 @@ Thank you Jose Lopez for your assistance with JS modularlization.
 ## Video
 
 Link to application running: https://drive.google.com/file/d/1xNGzuJknghn9L-1YWFl3F19YvePZswBT/view
+Sample Readme located in the New_Readme folder.
 
 ## Tests
 
