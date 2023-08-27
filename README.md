@@ -35,7 +35,7 @@ This application is covered under the MIT license.
 
 ## Credits
 
-Thank you Jose Lopez for you assistance with JS modularlization.
+Thank you Jose Lopez for your assistance with JS modularlization.
 
 ## Video
 
