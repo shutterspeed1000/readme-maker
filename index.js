@@ -1,45 +1,65 @@
-// TODO: Include packages needed for this application
+// Required Applications
 
 const questions = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
+// Question bank for readme.md
 const questBank = [
   {
     type: "input",
     message: "What is your project name?",
     name: "projectName",
+    validate: (value) => {
+      if (value.length < 1) {
+        return `You must provide a name for your project`;
+      }
+      return true;
+    },
+    
   },
   {
     type: "input",
     message: "What is your Github user ID?",
     name: "username",
+    validate: (value) => {
+      if (value.length < 1) {
+        return `You must provide a Github account`;
+      }
+      return true;
+    },
   },
   {
     type: "input",
     message: "What is you email address?",
     name: "email",
+    validate: (value) => {
+      if (value.length < 1) {
+        return `You must provide a email address`;
+      }
+      return true;
+    },
   },
   {
     type: "input",
     message: "Describe your project:",
     name: "projectDesc",
+    validate: (value) => {
+      if (value.length < 1) {
+        return `You must provide a description for your project`;
+      }
+      return true;
+    },
   },
   {
     type: "input",
-    message: "Enter the installation instructions:",
+    message: "What are the steps required to install your project?",
     name: "installation",
   },
   {
     type: "input",
-    message: "Enter the usage information:",
+    message: "Provide instructions and examples for use:",
     name: "usage",
-  },
-  {
-    type: "input",
-    message: "Do anyone else contribute to this project?",
-    name: "credits",
   },
   {
     type: "input",
@@ -54,14 +74,14 @@ const questBank = [
   {
     type: "list",
     message: "Please selecte the type of license:",
-    choices: ["MIT", "GNU", "Mozilla_Public_License_2.0", 'None'],
+    choices: ["MIT", "GNU", "Mozilla_Public_License_2.0", "None"],
     name: "license",
   },
 ];
 
 
 
-// // TODO: Create a function to write README file
+// Create readme file in /new_readme
 function writeToFile(fileName, data) {
 fs.writeFile(fileName, data, (err, result)=> {
   if  (err) throw err;
@@ -69,10 +89,10 @@ fs.writeFile(fileName, data, (err, result)=> {
 })
 }
 
-// TODO: Create a function to initialize app
+// initializes application and starts questions. 
 function init() {
   questions.prompt(questBank).then((answers) => {
-    writeToFile('README.md', generateMarkdown(answers))
+    writeToFile('./New_Readme/README.md', generateMarkdown(answers))
   });
 }
 
