@@ -11,6 +11,7 @@ Readme Maker is a simple application to create a professional readme.md file to 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Credits](#credits)
 - [License](#license)
 - [Video](#video)
 - [Tests](#tests)
@@ -31,6 +32,10 @@ Anyone can contirbute to this application by cloning the code and making changes
 ## License
 
 This application is covered under the MIT license.
+
+## Credits
+
+Thank you Jose Lopez for you assistance with JS modularlization.
 
 ## Video
 
